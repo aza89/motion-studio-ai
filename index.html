@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080812" />
+    <title>Motion Studio AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">M</span><span>MOTION<span class="brand-muted"> STUDIO</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span> CREATIVE PLAYGROUND <span class="version">BETA 01</span></div>
+      <a class="github-link" href="https://github.com/aza89/motion-studio-ai" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span>01</span> / MOTION EXPERIMENTS</div>
+        <h1>Make things<br><span class="gradient-text">move.</span></h1>
+        <p class="hero-copy">A small playground for big motion ideas.<br>Change the parameters. Play with the movement.</p>
+        <a class="scroll-cue" href="#playground"><span class="scroll-line"></span> EXPLORE THE PLAYGROUND</a>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-sphere"></div>
+      </section>
+
+      <section class="playground" id="playground">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span>02</span> / LIVE CANVAS</div><h2>Motion playground</h2></div>
+          <div class="status"><span class="live-dot"></span> LIVE PREVIEW</div>
+        </div>
+        <div class="studio">
+          <div class="canvas-wrap">
+            <div class="canvas-grid"></div>
+            <div class="canvas-label">CANVAS / 01</div>
+            <div class="canvas-object" id="canvasObject">
+              <div class="object-core"></div><div class="object-ring ring-a"></div><div class="object-ring ring-b"></div><div class="object-glow"></div>
+            </div>
+            <div class="canvas-coordinates">X <span id="xValue">0</span> &nbsp; Y <span id="yValue">0</span></div>
+            <div class="canvas-bottom">DRAG THE SLIDERS TO EXPERIMENT</div>
+          </div>
+          <aside class="controls">
+            <div class="control-title">01 <span>TRANSFORM</span></div>
+            <label class="control"><span>Rotation <output id="rotationOut">0°</output></span><input id="rotation" type="range" min="-180" max="180" value="0"></label>
+            <label class="control"><span>Scale <output id="scaleOut">100%</output></span><input id="scale" type="range" min="50" max="150" value="100"></label>
+            <label class="control"><span>Speed <output id="speedOut">1.0×</output></span><input id="speed" type="range" min="0" max="30" value="10"></label>
+            <div class="control-title second">02 <span>ANIMATION</span></div>
+            <div class="mode-switch" role="group" aria-label="Animation mode">
+              <button class="mode active" data-mode="float">FLOAT</button><button class="mode" data-mode="spin">SPIN</button><button class="mode" data-mode="pulse">PULSE</button>
+            </div>
+            <div class="control-actions"><button id="playButton" class="primary-button">Ⅱ &nbsp; PAUSE</button><button id="resetButton" class="reset-button" aria-label="Reset">↺</button></div>
+            <p class="hint">TIP / Select a mode and tune the motion to find your rhythm.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="principles">
+        <div class="eyebrow"><span>03</span> / THE TOOLKIT</div>
+        <h2>Good motion has<br><span class="gradient-text">a point of view.</span></h2>
+        <div class="principle-grid">
+          <article><span>01</span><h3>Purposeful</h3><p>Every movement should guide attention, reveal meaning, or create feeling.</p></article>
+          <article><span>02</span><h3>Playful</h3><p>Experiment with rhythm, scale, and timing. Unexpected details make it memorable.</p></article>
+          <article><span>03</span><h3>Precise</h3><p>Small adjustments to easing and duration can change the entire character.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer><span>© 2026 MOTION STUDIO AI</span><span>BUILT FOR EXPERIMENTATION <b>✳</b></span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
